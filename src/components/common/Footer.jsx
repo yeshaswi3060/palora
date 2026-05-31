@@ -14,7 +14,7 @@ export default function Footer() {
       <div className={styles.claimSection}>
         <div className={styles.claimContent}>
           <h2 className={styles.claimText}>CLAIM YOUR STYLE</h2>
-          <p className={styles.claimSubtext}>Join the AURA insider list for exclusive access to upcoming collections, private sales, and editorial lookbooks.</p>
+          <p className={styles.claimSubtext}>Join the PALLORA insider list for exclusive access to upcoming collections, private sales, and editorial lookbooks.</p>
           <div className={styles.subscribeForm}>
             <input type="email" placeholder="EMAIL ADDRESS" className={styles.emailInput} />
             <button className={styles.subscribeBtn}>SUBSCRIBE &rarr;</button>
@@ -65,16 +65,20 @@ export default function Footer() {
         <div className={styles.footerColumn}>
           <span className={styles.footerTitle}>CONTACT</span>
           <div className={styles.contactInfo}>
-            <span>INFO@AURA.COM</span><br />
-            <span>PRESS@AURA.COM</span>
+            <span className={styles.footerLink}>INFO@PALLORA.COM</span><br />
+            <span className={styles.footerLink}>PRESS@PALLORA.COM</span>
           </div>
         </div>
       </div>
 
       <div className={styles.brandNameContainer}>
         <img src="/images/footer_left.png" alt="Model Left" className={styles.bottomModelLeft} />
-        <h1 className={styles.hugeBrandName}>AURA</h1>
+        <h1 className={styles.hugeBrandName}>PALLORA</h1>
         <img src="/images/footer_right.png" alt="Model Right" className={styles.bottomModelRight} />
+      </div>
+
+      <div style={{ textAlign: 'center', padding: '2rem', fontSize: '0.8rem', color: '#666', borderTop: '1px solid #ddd' }}>
+        &copy; 2026 PALLORA. All rights reserved. | Terms & Conditions | Privacy Policy
       </div>
     </footer>
   );

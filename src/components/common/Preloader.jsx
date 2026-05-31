@@ -65,7 +65,7 @@ export default function Preloader() {
       
       {/* The Logo and Loading Line */}
       <div className={styles.content} ref={contentRef}>
-        <h1 className={styles.logo}>AURA</h1>
+        <h1 className={styles.logo}>PALLORA</h1>
         <div className={styles.track}>
           <div className={styles.progressLine} ref={lineRef}></div>
         </div>

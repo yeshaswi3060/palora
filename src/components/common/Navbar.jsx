@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        AURA
+        PALLORA
       </div>
       
       <div className={styles.links}>

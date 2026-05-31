@@ -86,7 +86,7 @@ export default function VisionSection() {
           NEW VISION<br />
           OF FUSION<br />
           WITH<br />
-          AURA
+          PALLORA
         </h2>
       </div>
 
@@ -100,7 +100,7 @@ export default function VisionSection() {
       </div>
 
       <div className={styles.subText}>
-        <p>Aura redefines modern ethnic wear and invites you to explore fashion with a fresh, vibrant perspective.</p>
+        <p>Pallora redefines modern ethnic wear and invites you to explore fashion with a fresh, vibrant perspective.</p>
       </div>
     </section>
   );

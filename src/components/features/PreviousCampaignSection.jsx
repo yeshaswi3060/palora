@@ -4,9 +4,9 @@ import styles from './PreviousCampaignSection.module.css';
 
 export default function PreviousCampaignSection() {
   const campaigns = [
-    { name: "VIBRANCE", date: "Festive 2023", img: "/images/hero.png" },
-    { name: "MUMBAI NIGHTS", date: "Spring/Summer 2023", img: "/images/saree.png" },
-    { name: "AURA REGAL", date: "Festive 2022", img: "/images/kurta.png", active: true },
+    { name: "PALLORA REGAL", date: "Festive 2022", img: "/images/kurta.png", active: true },
+    { name: "THE VELVET EDIT", date: "Winter 2023", img: "/images/hero.png", active: false },
+    { name: "MODERN MUSE", date: "Spring 2024", img: "/images/saree.png", active: false },
     { name: "SILK", date: "Spring/Summer 2022", img: "/images/jacket.png" },
     { name: "FUSION", date: "Festive 2021", img: "/images/hero.png" },
   ];

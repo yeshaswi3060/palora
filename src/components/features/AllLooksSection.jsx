@@ -23,7 +23,7 @@ export default function AllLooksSection() {
 
         <div className={styles.infoGroup}>
           <h3 className={styles.infoTitle}>COLLECTION</h3>
-          <p className={styles.infoValue}>Aura</p>
+          <p className={styles.infoValue}>Pallora</p>
         </div>
 
         <div className={styles.infoGroup}>
@@ -42,7 +42,7 @@ export default function AllLooksSection() {
         </div>
 
         <p className={styles.description}>
-          With statement kurtas, expansive lehengas, and flowing silks paired with sleek modern silhouettes and vibrant accessories, the Aura collection exudes a cohesive, elegant fusion aesthetic.
+          With statement kurtas, expansive lehengas, and flowing silks paired with sleek modern silhouettes and vibrant accessories, the Pallora collection exudes a cohesive, elegant fusion aesthetic.
         </p>
 
         <div className={styles.navigation}>

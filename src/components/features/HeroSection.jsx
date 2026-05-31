@@ -70,7 +70,7 @@ export default function HeroSection() {
   return (
     <section className={styles.hero} ref={sectionRef}>
       <div className={styles.titleContainer}>
-        <h1 className={styles.title} ref={titleRef}>AURA</h1>
+        <h1 className={styles.title} ref={titleRef}>PALLORA</h1>
       </div>
 
       <div className={styles.modelsContainer}>
@@ -94,7 +94,7 @@ export default function HeroSection() {
 
       <div className={styles.sideTextLeft}>
         <h3>OUR CAMPAIGN</h3>
-        <p>At AURA, each season unfolds a new story, a journey through vibrant embroidery, rich silks, and elegant fusion tailoring.</p>
+        <p>At PALLORA, each season unfolds a new story, a journey through vibrant embroidery, rich silks, and elegant fusion tailoring.</p>
         <button className={styles.ctaButton}>Shop the Campaign</button>
       </div>
 

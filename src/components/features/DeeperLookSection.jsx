@@ -87,9 +87,9 @@ export default function DeeperLookSection() {
             />
           </div>
 
-          <div className={styles.philosophyText}>
-            <h3>DESIGN PHILOSOPHY</h3>
-            <p>AURA's Festive collection channels the spirit of celebration, presenting vivid colors and intricate zari work.</p>
+          <div className={styles.textBlock}>
+            <h2>THE FESTIVE COLLECTION</h2>
+            <p>PALLORA's Festive collection channels the spirit of celebration, presenting vivid colors and intricate zari work.</p>
           </div>
         </div>
       </div>
