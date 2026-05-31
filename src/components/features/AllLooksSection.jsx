@@ -28,7 +28,7 @@ export default function AllLooksSection() {
 
         <div className={styles.infoGroup}>
           <h3 className={styles.infoTitle}>EDITION</h3>
-          <p className={styles.infoValue}>Festive 2024</p>
+          <p className={styles.infoValue}>Festive 2026</p>
         </div>
 
         <div className={styles.infoGroup}>

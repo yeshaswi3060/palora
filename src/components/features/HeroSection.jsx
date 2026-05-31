@@ -99,7 +99,7 @@ export default function HeroSection() {
       </div>
 
       <div className={styles.sideTextRight}>
-        <h3>FESTIVE 2024</h3>
+        <h3>FESTIVE 2026</h3>
         <p>Redefines the essence of fusion, taking inspiration from deep roots and evolving it into an expression of colorful, modern elegance.</p>
         <button className={styles.ctaButton}>Explore Festive</button>
       </div>

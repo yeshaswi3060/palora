@@ -57,7 +57,7 @@ export default function FeaturedProductSection() {
           <h2 className={styles.title}>Embroidered Silk Fusion Jacket</h2>
           <p className={styles.price}>$2,450</p>
           <p className={styles.description}>
-            A statement piece from the Festive 2024 collection. This fusion jacket features rich embroidery, premium silk fabric, and a sleek modern cut. Perfect for elevating any modern ethnic wardrobe.
+            A statement piece from the Festive 2026 collection. This fusion jacket features rich embroidery, premium silk fabric, and a sleek modern cut. Perfect for elevating any modern ethnic wardrobe.
           </p>
           <button className={styles.button}>Add to Cart</button>
         </div>

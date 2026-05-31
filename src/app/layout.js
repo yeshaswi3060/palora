@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
 
 export const metadata = {
-  title: "JUUN.J | PERSONA",
-  description: "Fall/Winter 2024 - A deeper look inside the campaign",
+  title: "PALORA",
+  description: "Proffectional Indo Western Wear Brand 2026 ",
 };
 
 export default function RootLayout({ children }) {
