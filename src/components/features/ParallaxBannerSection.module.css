@@ -1,0 +1,78 @@
+.section {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Massive cinematic break */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bgContainer {
+  position: absolute;
+  top: -20%; /* Allow space for parallax translation */
+  left: 0;
+  width: 100%;
+  height: 140%;
+  z-index: 1;
+}
+
+.bgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay to make text pop */
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--white);
+  padding: 0 5vw;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-family: var(--font-inter);
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 1.5rem 0 3rem 0;
+}
+
+.shopBtn {
+  background-color: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+  padding: 1rem 3rem;
+  font-family: var(--font-inter);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shopBtn:hover {
+  background-color: var(--white);
+  color: var(--black);
+}

@@ -1,0 +1,82 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  /* This is the magic property that inverts text color against the background */
+  mix-blend-mode: difference;
+  color: #fff; /* White text becomes black on white backgrounds, and stays white on black backgrounds */
+  pointer-events: none; /* Let clicks pass through if we aren't hovering directly on links */
+}
+
+.logo {
+  font-family: var(--font-oswald);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  pointer-events: auto;
+}
+
+.links {
+  display: flex;
+  gap: 3rem;
+  font-family: var(--font-inter);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  pointer-events: auto;
+}
+
+.link {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.link:hover {
+  opacity: 0.6;
+}
+
+.contactContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  pointer-events: auto;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.icon {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.icon:hover {
+  opacity: 0.6;
+}
+
+.contactBtn {
+  font-family: var(--font-inter);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.contactBtn:hover {
+  opacity: 0.6;
+}

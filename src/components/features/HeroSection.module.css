@@ -1,0 +1,179 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 120vh; /* Extra height for scrolling overlap */
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 15vh;
+  overflow: hidden;
+}
+
+.titleContainer {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  font-family: var(--font-inter);
+  font-size: clamp(4rem, 16vw, 24rem); /* Responsive scaling */
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  color: var(--black);
+  margin: 0;
+  mix-blend-mode: normal; 
+}
+
+.modelsContainer {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+}
+
+.centerArch {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35vw;
+  height: 80vh;
+  background-color: #f4f1eb; /* Soft beige */
+  border-top-left-radius: 20vw;
+  border-top-right-radius: 20vw;
+  z-index: 1; /* Behind models */
+}
+
+.modelWrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modelLeftWrapper {
+  width: 30vw;
+  left: 0;
+  top: 15vh;
+  z-index: 4;
+}
+
+.modelCenterWrapper {
+  width: 35vw;
+  top: 5vh;
+  z-index: 2;
+}
+
+.modelRightWrapper {
+  width: 25vw;
+  right: 0;
+  top: 25vh;
+  z-index: 4;
+}
+
+.modelImage {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+.floorShadow {
+  position: absolute;
+  bottom: -2%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 20px;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 70%);
+  z-index: 1;
+}
+
+.sideTextLeft {
+  position: absolute;
+  left: 5vw;
+  top: 40vh;
+  width: 20vw;
+  max-width: 22vw; /* Strict max width to prevent overlap */
+  z-index: 5;
+  font-family: var(--font-inter);
+}
+
+.sideTextLeft h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.sideTextLeft p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.sideTextRight {
+  position: absolute;
+  right: 5vw;
+  top: 30vh;
+  width: 20vw;
+  max-width: 22vw; /* Strict max width to prevent overlap */
+  z-index: 5;
+  font-family: var(--font-inter);
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align button to right */
+}
+
+.sideTextRight h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.sideTextRight p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.ctaButton {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  font-family: var(--font-inter);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  pointer-events: auto;
+}
+
+.ctaButton:hover {
+  background-color: #333;
+}
+
+/* A gradient fade at the bottom to transition to the next section */
+.bottomFade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  background: linear-gradient(to top, var(--white) 0%, transparent 100%);
+  z-index: 10;
+}

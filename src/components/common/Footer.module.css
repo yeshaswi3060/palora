@@ -1,0 +1,189 @@
+.footer {
+  width: 100%;
+  background-color: var(--black);
+  color: var(--white);
+  position: relative;
+  /* Removed overflow: hidden to allow models to overlap */
+}
+
+.claimSection {
+  background-color: var(--white);
+  color: var(--black);
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-top: 1px solid #eaeaea;
+}
+
+.claimContent {
+  text-align: center;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.claimText {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.claimSubtext {
+  font-family: var(--font-inter);
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.subscribeForm {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid var(--black);
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.emailInput {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: var(--font-inter);
+  font-size: 0.9rem;
+  outline: none;
+  color: var(--black);
+}
+
+.emailInput::placeholder {
+  color: #999;
+  letter-spacing: 1px;
+}
+
+.subscribeBtn {
+  background: transparent;
+  border: none;
+  font-family: var(--font-inter);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.subscribeBtn:hover {
+  opacity: 0.6;
+}
+
+.marqueeContainer {
+  background-color: var(--black);
+  color: var(--white);
+  border-bottom: 1px solid #333;
+  border-top: 1px solid #333;
+  padding: 1rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marqueeTrack {
+  display: inline-flex;
+  animation: marquee 20s linear infinite;
+}
+
+.marqueeItem {
+  font-family: var(--font-inter);
+  font-size: 1.5rem;
+  margin-right: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.marqueeIcon {
+  font-size: 1.2rem;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.footerBottom {
+  padding: 10vh 10vw; /* Increased padding to make it bigger */
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-inter);
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footerTitle {
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.footerLink {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footerLink:hover {
+  color: var(--white);
+}
+
+.contactInfo {
+  margin-top: 2rem;
+  color: #888;
+}
+
+.brandNameContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align models and text to bottom */
+  padding-bottom: 0;
+  margin-top: 10vh; /* Give space above text */
+}
+
+.bottomModelLeft, .bottomModelRight {
+  position: absolute;
+  bottom: 0;
+  height: 40vw; /* Adjust size to fit beside text */
+  object-fit: contain;
+  z-index: 3; /* Placed in front of the text */
+  mix-blend-mode: normal;
+}
+
+.bottomModelLeft {
+  left: -100;
+}
+
+.bottomModelRight {
+  right: -100;
+}
+
+.hugeBrandName {
+  position: relative;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24vw; /* Huge size */
+  font-weight: 700;
+  color: var(--white);
+  line-height: 0.8;
+  margin: 0;
+  letter-spacing: -0.05em;
+  z-index: 2; /* Keep text behind images */
+}

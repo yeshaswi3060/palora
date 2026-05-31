@@ -1,0 +1,83 @@
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 120vh;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.textContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+  z-index: 2;
+  /* Mix blend mode for text layering */
+  mix-blend-mode: normal;
+}
+
+.title {
+  font-family: var(--font-inter);
+  font-size: 8vw;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--black);
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.mainModelContainer {
+  position: relative;
+  height: 80vh;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Using the multiply trick to simulate a cutout */
+.mainModel {
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: normal;
+}
+
+.carouselContainer {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  height: 20vh;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  opacity: 0.6;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 2vw;
+  width: max-content;
+}
+
+.carouselImage {
+  height: 20vh;
+  width: auto;
+  object-fit: cover;
+}
+
+.subText {
+  position: absolute;
+  bottom: 20%;
+  right: 15%;
+  width: 250px;
+  font-family: var(--font-inter);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #555;
+  z-index: 5;
+}
