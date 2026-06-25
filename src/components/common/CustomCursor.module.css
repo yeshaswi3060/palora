@@ -45,3 +45,31 @@
     display: none;
   }
 }
+
+/* Shop specific crosshair cursor */
+.shopCursor {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border-radius: 0;
+  mix-blend-mode: difference;
+}
+
+.crossLineH, .crossLineV {
+  position: absolute;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease;
+}
+
+.crossLineH {
+  width: 100%;
+  height: 1px;
+}
+
+.crossLineV {
+  height: 100%;
+  width: 1px;
+}

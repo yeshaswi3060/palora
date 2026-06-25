@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Search, User, ShoppingBag, Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
 import MagneticButton from './MagneticButton';
@@ -11,21 +12,33 @@ export default function Navbar() {
   return (
     <>
       <nav className={`${styles.navbar} ${isMobileMenuOpen ? styles.navbarOpen : ''}`}>
-        <div className={styles.logo} data-cursor="hover">
-          PALLORA
-        </div>
+        <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <div className={styles.logo} data-cursor="hover">
+            PALLORA
+          </div>
+        </Link>
         
         <div className={`${styles.links} ${isMobileMenuOpen ? styles.mobileLinksOpen : ''}`}>
-          <MagneticButton><span className={styles.link} data-cursor="hover" onClick={() => setIsMobileMenuOpen(false)}>ABOUT</span></MagneticButton>
-          <MagneticButton><span className={styles.link} data-cursor="hover" onClick={() => setIsMobileMenuOpen(false)}>CAMPAIGN</span></MagneticButton>
-          <MagneticButton><span className={styles.link} data-cursor="hover" onClick={() => setIsMobileMenuOpen(false)}>COLLECTIONS</span></MagneticButton>
-          <MagneticButton><span className={styles.link} data-cursor="hover" onClick={() => setIsMobileMenuOpen(false)}>SHOP</span></MagneticButton>
+          <MagneticButton>
+            <Link href="/about" className={styles.link} data-cursor="hover" onClick={() => setIsMobileMenuOpen(false)}>ABOUT</Link>
+          </MagneticButton>
+          <MagneticButton>
+            <Link href="/campaign" className={styles.link} data-cursor="hover" onClick={() => setIsMobileMenuOpen(false)}>CAMPAIGN</Link>
+          </MagneticButton>
+          <MagneticButton>
+            <Link href="/collections" className={styles.link} data-cursor="hover" onClick={() => setIsMobileMenuOpen(false)}>COLLECTIONS</Link>
+          </MagneticButton>
+          <MagneticButton>
+            <Link href="/shop" className={styles.link} data-cursor="hover" onClick={() => setIsMobileMenuOpen(false)}>SHOP</Link>
+          </MagneticButton>
           
           {/* Mobile only contact button inside menu */}
           <MagneticButton>
-            <span className={`${styles.contactBtn} ${styles.mobileOnlyBtn}`} data-cursor="hover">
-              CONTACT US <span>&rarr;</span>
-            </span>
+            <Link href="/contact" style={{ textDecoration: 'none' }}>
+              <span className={`${styles.contactBtn} ${styles.mobileOnlyBtn}`} data-cursor="hover">
+                CONTACT US <span>&rarr;</span>
+              </span>
+            </Link>
           </MagneticButton>
         </div>
 
@@ -36,9 +49,11 @@ export default function Navbar() {
             <MagneticButton><div data-cursor="hover"><ShoppingBag size={18} className={styles.icon} /></div></MagneticButton>
           </div>
           <MagneticButton>
-            <span className={`${styles.contactBtn} ${styles.desktopOnlyBtn}`} data-cursor="hover">
-              CONTACT US <span>&rarr;</span>
-            </span>
+            <Link href="/contact" style={{ textDecoration: 'none' }}>
+              <span className={`${styles.contactBtn} ${styles.desktopOnlyBtn}`} data-cursor="hover">
+                CONTACT US <span>&rarr;</span>
+              </span>
+            </Link>
           </MagneticButton>
           <MagneticButton>
             <button 

@@ -1,13 +1,17 @@
 "use client";
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import gsap from 'gsap';
 import styles from './CustomCursor.module.css';
 
 export default function CustomCursor() {
   const cursorRef = useRef(null);
+  const pathname = usePathname();
   const [isHovering, setIsHovering] = useState(false);
   const [hoverText, setHoverText] = useState("");
+  
+  const isShop = pathname === '/shop';
 
   useEffect(() => {
     // Hide on touch devices
@@ -50,8 +54,14 @@ export default function CustomCursor() {
   }, []);
 
   return (
-    <div className={`${styles.cursor} ${isHovering ? styles.hovering : ''}`} ref={cursorRef}>
+    <div className={`${styles.cursor} ${isHovering ? styles.hovering : ''} ${isShop ? styles.shopCursor : ''}`} ref={cursorRef}>
       {isHovering && hoverText && <span className={styles.cursorText}>{hoverText}</span>}
+      {isShop && !isHovering && (
+        <>
+          <div className={styles.crossLineH}></div>
+          <div className={styles.crossLineV}></div>
+        </>
+      )}
     </div>
   );
 }
