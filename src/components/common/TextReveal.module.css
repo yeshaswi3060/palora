@@ -1,0 +1,18 @@
+.revealContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the revealed text lines */
+  justify-content: center;
+}
+
+.lineOuter {
+  overflow: hidden; /* This acts as the mask */
+  display: flex;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+.lineInner {
+  transform: translateY(100%); /* Start hidden below the mask */
+  will-change: transform;
+}

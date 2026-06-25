@@ -95,15 +95,48 @@
   
   .imageWrapper {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
+    min-height: 50vh; /* Force height so it doesn't collapse */
+    display: block;
+  }
+  
+  .image {
+    height: 100%; /* Disable parallax to prevent awkward cropping */
+    top: 0;
   }
   
   .content {
     width: 100%;
-    padding: 2rem 0;
+    padding: 3rem 0;
+    align-items: center; 
+    text-align: center;
   }
   
   .title {
     font-size: 2.5rem;
+  }
+  
+  .button {
+    align-self: center; 
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+  }
+  
+  .description {
+    max-width: 95%;
+    font-size: 0.95rem;
+  }
+  
+  .button {
+    width: 100%;
+    max-width: 300px;
   }
 }

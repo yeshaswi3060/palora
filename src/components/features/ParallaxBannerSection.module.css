@@ -76,3 +76,30 @@
   background-color: var(--white);
   color: var(--black);
 }
+
+/* Premium Mobile Styles */
+@media (max-width: 900px) {
+  .section {
+    height: 60vh; /* Scale down height */
+  }
+  
+  .title {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    height: 50vh;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin: 1rem 0 2rem 0;
+  }
+  
+  .shopBtn {
+    padding: 0.8rem 2rem;
+    font-size: 0.8rem;
+  }
+}

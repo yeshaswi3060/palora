@@ -1,0 +1,47 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #fff; /* Must be white for difference blending to work */
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+}
+
+.cursor.hovering {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.cursorText {
+  font-family: var(--font-inter);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards 0.1s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hide on touch screens via media query as fallback */
+@media (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+}

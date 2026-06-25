@@ -132,3 +132,47 @@
   color: #666;
   margin: 0;
 }
+
+/* Premium Mobile Styles */
+@media (max-width: 900px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+  .productCard {
+    width: 60vw;
+    margin-right: 5vw;
+  }
+  
+  .trackContainer {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .productCard {
+    width: 80vw;
+    margin-right: 5vw;
+  }
+  
+  .trackContainer {
+    height: 65vh;
+  }
+  
+  /* Always show quick add button on mobile for better UX, or change hover behavior */
+  .quickAddBtn {
+    transform: translateY(0);
+    padding: 0.8rem 2rem;
+    font-size: 0.8rem;
+  }
+  
+  .hoverOverlay {
+    opacity: 1;
+    background-color: transparent; /* Remove dark background so image is clear */
+    background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 40%);
+  }
+}

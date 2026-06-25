@@ -8,10 +8,13 @@
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  /* This is the magic property that inverts text color against the background */
   mix-blend-mode: difference;
-  color: #fff; /* White text becomes black on white backgrounds, and stays white on black backgrounds */
-  pointer-events: none; /* Let clicks pass through if we aren't hovering directly on links */
+  color: #fff;
+  pointer-events: none; 
+}
+
+.navbarOpen {
+  mix-blend-mode: normal !important;
 }
 
 .logo {
@@ -20,6 +23,7 @@
   font-weight: 500;
   letter-spacing: 2px;
   pointer-events: auto;
+  z-index: 1001; 
 }
 
 .links {
@@ -47,6 +51,7 @@
   align-items: center;
   gap: 2rem;
   pointer-events: auto;
+  z-index: 1001;
 }
 
 .icons {
@@ -79,4 +84,112 @@
 
 .contactBtn:hover {
   opacity: 0.6;
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mobileOnlyBtn {
+  display: none;
+}
+
+.menuOverlay {
+  display: none;
+}
+
+/* Premium Mobile Styles */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 1.5rem 2rem;
+  }
+  
+  .menuToggle {
+    display: block;
+    margin-left: 0.5rem;
+  }
+  
+  .desktopOnlyBtn {
+    display: none;
+  }
+  
+  .mobileOnlyBtn {
+    display: flex;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Mobile Menu Overlay Configuration */
+  .links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--black);
+    color: var(--white);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem;
+    gap: 2rem;
+    transition: right 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+    mix-blend-mode: normal; /* Normal rendering on mobile */
+  }
+  
+  .links.mobileLinksOpen {
+    right: 0;
+  }
+  
+  .link {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  /* Overlay behind the menu */
+  .menuOverlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+  
+  .menuOverlay.menuOverlayOpen {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .icons {
+    gap: 0.8rem;
+  }
+  
+  .links {
+    width: 100%;
+    padding: 3rem 2rem;
+  }
 }

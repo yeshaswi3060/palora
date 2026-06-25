@@ -95,3 +95,41 @@
 .arrow {
   cursor: pointer;
 }
+
+/* Premium Mobile Styles */
+@media (max-width: 900px) {
+  .section {
+    padding: 10vh 2vw;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .campaignCard {
+    width: 200px;
+  }
+  
+  .campaignCard.active {
+    width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .campaignCard {
+    width: 150px;
+  }
+  
+  .campaignCard.active {
+    width: 220px;
+  }
+  
+  .navigationArrows {
+    margin-top: 2rem;
+  }
+}

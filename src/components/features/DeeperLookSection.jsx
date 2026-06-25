@@ -89,7 +89,7 @@ export default function DeeperLookSection() {
 
           <div className={styles.textBlock}>
             <h2>THE FESTIVE COLLECTION</h2>
-            <p>PALLORA's Festive collection channels the spirit of celebration, presenting vivid colors and intricate zari work.</p>
+            <p>PALLORA&apos;s Festive collection channels the spirit of celebration, presenting vivid colors and intricate zari work.</p>
           </div>
         </div>
       </div>

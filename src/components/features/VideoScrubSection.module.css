@@ -1,0 +1,66 @@
+.section {
+  position: relative;
+  width: 100%;
+  height: 100dvh; /* Uses dynamic viewport height to prevent jumps on mobile */
+  background-color: var(--black);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  z-index: 2;
+}
+
+.textContainer {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: var(--white);
+  padding: 0 2rem;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin: 0;
+  line-height: 1;
+}
+
+.subtitle {
+  font-family: var(--font-inter);
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  color: #ccc;
+}
+
+@media (max-width: 900px) {
+  .title {
+    font-size: 4rem;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}

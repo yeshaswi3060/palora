@@ -5,6 +5,7 @@ import DeeperLookSection from "@/components/features/DeeperLookSection";
 import FeaturedProductSection from "@/components/features/FeaturedProductSection";
 import ProductGridSection from "@/components/features/ProductGridSection";
 import VisionSection from "@/components/features/VisionSection";
+import VideoScrubSection from "@/components/features/VideoScrubSection";
 import AllLooksSection from "@/components/features/AllLooksSection";
 import HorizontalShopSection from "@/components/features/HorizontalShopSection";
 import ParallaxBannerSection from "@/components/features/ParallaxBannerSection";
@@ -16,17 +17,14 @@ export default function Home() {
     <main className={styles.main}>
       <Preloader />
       <HeroSection />
+      <VideoScrubSection />
       <DeeperLookSection />
-      
-      <FeaturedProductSection />
-      <ProductGridSection />
-      
       <VisionSection />
+      <FeaturedProductSection />
       <HorizontalShopSection />
-      
+      <ProductGridSection />
       <ParallaxBannerSection />
       <AllLooksSection />
-      
       <BrandPerksSection />
       <Footer />
     </main>
